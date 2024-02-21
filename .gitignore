@@ -5,6 +5,8 @@ __pycache__/
 
 # C extensions
 *.so
+*.apk
+ru.litres.android.apk
 
 # Distribution / packaging
 .Python

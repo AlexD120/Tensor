@@ -35,22 +35,6 @@ def browser_config(request):
     options.add_argument("--disable-popup-blocking")
     options.add_argument("--disable-infobars")
     options.add_argument("--disable-notifications-prompt")
-    selenoid_capabilities = {
-        "browserName": 'chrome',
-        "browserVersion": browser_version,
-        "selenoid:options": {"enableVNC": True, "enableVideo": True},
-    }
-    options.capabilities.update(selenoid_capabilities)
-    load_dotenv()
-    login_selenoid = os.getenv('LOGIN')
-    password_selenoid = os.getenv('PASSWORD')
-
-    driver = webdriver.Remote(
-        command_executor=f"https://{login_selenoid}:{password_selenoid}@selenoid.autotests.cloud/wd/hub",
-        options=options,
-    )
-
-    browser.config.driver = driver
 
     yield browser
 

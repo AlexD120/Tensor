@@ -2,12 +2,12 @@ from tensor.helpers.application import app
 import allure
 
 
-@allure.title('')
-@allure.feature('')
-@allure.story('')
+@allure.title("Тестирование параметров фото на сайте Tensor")
+@allure.feature("Главная страница")
+@allure.story("Проверка параметров фото сотрудников")
 @allure.label('UI')
 @allure.tag('smoke')
-@allure.severity('')
+@allure.severity('minor')
 @allure.label("owner", "Davydov")
 def test_photo_parameters(browser_config):
     # ARRANGE

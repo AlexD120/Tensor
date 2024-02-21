@@ -2,12 +2,12 @@ from tensor.helpers.application import app
 import allure
 
 
-@allure.title('')
-@allure.feature('')
-@allure.story('')
+@allure.title("Тестирование смены региона на сайте СБИС")
+@allure.feature("Контакты")
+@allure.story("Смена региона на Камчатский край")
 @allure.label('UI')
 @allure.tag('smoke')
-@allure.severity('')
+@allure.severity('minor')
 @allure.label("owner", "Davydov")
 def test_region(browser_config):
     # ARRANGE

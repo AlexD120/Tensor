@@ -2,12 +2,12 @@ from tensor.helpers.application import app
 import allure
 
 
-@allure.title('')
-@allure.feature('')
-@allure.story('')
+@allure.title("Тестирование скачивания файла плагина")
+@allure.feature("Скачивание")
+@allure.story("Скачивание файла плагина")
 @allure.label('UI')
 @allure.tag('smoke')
-@allure.severity('')
+@allure.severity('minor')
 @allure.label("owner", "Davydov")
 def test_download_plugin_file(browser_config):
     # ARRANGE
